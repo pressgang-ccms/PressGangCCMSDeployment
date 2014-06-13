@@ -1,0 +1,52 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+    <id>pressgang-ccms-dist</id>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/unpacked</directory>
+            <includes>
+                <include>*.ear</include>
+                <include>*.jar</include>
+                <include>*.xml</include>
+            </includes>
+            <outputDirectory>${jboss-server.name}/standalone/deployments</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/unpacked/modules</directory>
+            <excludes>
+                <exclude>zanata-sync-service</exclude>
+            </excludes>
+            <outputDirectory>${jboss-server.name}/${jboss.modules.dir}</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}</directory>
+            <includes>
+                <include>servers.json</include>
+            </includes>
+            <outputDirectory>${jboss-server.name}/welcome-content/pressgang-ccms-config</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/src/main/config</directory>
+            <outputDirectory>${jboss-server.name}/standalone/configuration/pressgang/</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/JPPF</directory>
+            <excludes>
+                <exclude>JPPF-4.0.1-node/lib/log4j*.jar</exclude>
+                <exclude>JPPF-4.0.1-node/lib/slf4j*.jar</exclude>
+            </excludes>
+            <outputDirectory>JPPF</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/unpacked/zanata-sync-service</directory>
+            <outputDirectory>JPPF/JPPF-4.0.1-node/lib</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

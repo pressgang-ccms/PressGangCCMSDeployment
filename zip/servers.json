@@ -1,0 +1,11 @@
+[
+    {
+        "serverId": 1,
+        "serverName": "Local Server",
+        "serverGroup": "Local Servers",
+        "restUrl": "http://localhost:8080/pressgang-ccms",
+        "reportUrl": "http://localhost:8080/birt/",
+        "monitoringUrl": "http://localhost:8080/pressgang-ccms/monitoring",
+        "readOnly": false
+    }
+]
