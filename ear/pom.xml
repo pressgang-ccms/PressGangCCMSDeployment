@@ -53,6 +53,7 @@
                 <artifactId>maven-ear-plugin</artifactId>
                 <version>2.9</version>
                 <configuration>
+                    <filtering>true</filtering>
                     <modules>
                         <webModule>
                             <groupId>org.jboss.pressgang.ccms</groupId>
