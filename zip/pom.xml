@@ -18,6 +18,7 @@
     <properties>
         <jboss-server.name>jboss-eap-6.1</jboss-server.name>
         <jboss.modules.dir>modules/system/layers/base</jboss.modules.dir>
+        <jppf.version>4.0.1</jppf.version>
     </properties>
 
     <dependencies>
@@ -118,8 +119,8 @@
                         <phase>prepare-package</phase>
                         <configuration>
                             <tasks>
-                                <unzip src="JPPF/JPPF-4.0.1-driver.zip" dest="${project.build.directory}/JPPF/" />
-                                <unzip src="JPPF/JPPF-4.0.1-node.zip" dest="${project.build.directory}/JPPF/" />
+                                <unzip src="JPPF/JPPF-${jppf.version}-driver.zip" dest="${project.build.directory}/JPPF/" />
+                                <unzip src="JPPF/JPPF-${jppf.version}-node.zip" dest="${project.build.directory}/JPPF/" />
                             </tasks>
                         </configuration>
                         <goals>

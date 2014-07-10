@@ -39,14 +39,30 @@
         <fileSet>
             <directory>${project.build.directory}/JPPF</directory>
             <excludes>
-                <exclude>JPPF-4.0.1-node/lib/log4j*.jar</exclude>
-                <exclude>JPPF-4.0.1-node/lib/slf4j*.jar</exclude>
+                <exclude>JPPF-${jppf.version}-node/lib/log4j*.jar</exclude>
+                <exclude>JPPF-${jppf.version}-node/lib/slf4j*.jar</exclude>
+                <exclude>JPPF-${jppf.version}-node/startNode.sh</exclude>
+                <exclude>JPPF-${jppf.version}-driver/startDriver.sh</exclude>
             </excludes>
             <outputDirectory>JPPF</outputDirectory>
         </fileSet>
         <fileSet>
             <directory>${project.build.directory}/unpacked/zanata-sync-service</directory>
-            <outputDirectory>JPPF/JPPF-4.0.1-node/lib</outputDirectory>
+            <outputDirectory>JPPF/JPPF-${jppf.version}-node/lib</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/JPPF</directory>
+            <outputDirectory>JPPF/JPPF-${jppf.version}-node/</outputDirectory>
+            <includes>
+                <include>startNode.sh</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/JPPF</directory>
+            <outputDirectory>JPPF/JPPF-${jppf.version}-driver/</outputDirectory>
+            <includes>
+                <include>startDriver.sh</include>
+            </includes>
         </fileSet>
     </fileSets>
 </assembly>
