@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.pressgang.ccms</groupId>
     <artifactId>pressgang-ccms-deployment</artifactId>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.8</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -16,7 +16,7 @@
     </parent>
 
     <properties>
-        <pressgang.ccms.version>1.7-SNAPSHOT</pressgang.ccms.version>
+        <pressgang.ccms.version>1.8</pressgang.ccms.version>
     </properties>
 
     <build>
