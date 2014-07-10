@@ -47,6 +47,7 @@
     </dependencies>
 
     <build>
+        <finalName>pressgang-ccms-${project.version}</finalName> 
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

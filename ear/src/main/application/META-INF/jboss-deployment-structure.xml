@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
-    <sub-deployment name="pressgang-ccms-server-${project.version}.war">
+    <sub-deployment name="pressgang-ccms-server-${pressgang.ccms.version}.war">
         <exclusions>
             <module name="org.jboss.resteasy.resteasy-jackson-provider"/>
             <module name="org.jboss.resteasy.resteasy-yaml-provider" />
