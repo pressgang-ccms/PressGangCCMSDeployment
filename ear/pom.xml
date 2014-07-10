@@ -23,25 +23,25 @@
         <dependency>
             <groupId>org.jboss.pressgang.ccms</groupId>
             <artifactId>pressgang-ccms-server</artifactId>
-            <version>${pressgang.ccms.version}</version>
+            <version>${pressgang.ccms.server.version}</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.jboss.pressgang.ccms</groupId>
             <artifactId>pressgang-ccms-static</artifactId>
-            <version>${pressgang.static.version}</version>
+            <version>${pressgang.ccms.static.version}</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.jboss.pressgang.ccms</groupId>
             <artifactId>pressgang-ccms-import</artifactId>
-            <version>${pressgang.ccms.version}</version>
+            <version>${pressgang.ccms.import.version}</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.jboss.pressgang.ccms</groupId>
             <artifactId>pressgang-ccms-ui</artifactId>
-            <version>${pressgang.ccms.version}</version>
+            <version>${pressgang.ccms.ui.version}</version>
             <type>war</type>
         </dependency>
     </dependencies>

@@ -17,6 +17,10 @@
 
     <properties>
         <pressgang.ccms.version>1.8</pressgang.ccms.version>
+        <pressgang.ccms.server.version>${pressgang.ccms.version}</pressgang.ccms.server.version>
+        <pressgang.ccms.import.version>${pressgang.ccms.version}</pressgang.ccms.import.version>
+        <pressgang.ccms.ui.version>${pressgang.ccms.version}</pressgang.ccms.ui.version>
+        <pressgang.ccms.static.version>1.7</pressgang.ccms.static.version>
     </properties>
 
     <build>

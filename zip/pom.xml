@@ -47,10 +47,10 @@
                                 <artifactItem>
                                     <groupId>org.jboss.pressgang.ccms</groupId>
                                     <artifactId>pressgang-ccms-ear</artifactId>
-                                    <version>${pressgang.ccms.version}</version>
+                                    <version>${project.version}</version>
                                     <type>ear</type>
                                     <outputDirectory>${project.build.directory}/unpacked</outputDirectory>
-                                    <destFileName>pressgang-ccms-${pressgang.ccms.version}.ear</destFileName>
+                                    <destFileName>pressgang-ccms-${project.version}.ear</destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
