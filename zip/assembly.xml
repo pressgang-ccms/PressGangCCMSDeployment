@@ -30,13 +30,13 @@
         </fileSet>
 
         <!-- PressGang Config -->
-        <fileSet>
+        <!--<fileSet>
             <directory>${basedir}</directory>
             <includes>
                 <include>servers.json</include>
             </includes>
             <outputDirectory>${jboss-server.name}/welcome-content/pressgang-ccms-config</outputDirectory>
-        </fileSet>
+        </fileSet>-->
         <fileSet>
             <directory>${basedir}/src/main/config</directory>
             <outputDirectory>${jboss-server.name}/standalone/configuration/pressgang/</outputDirectory>
