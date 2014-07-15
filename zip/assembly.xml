@@ -9,6 +9,7 @@
     <includeBaseDirectory>false</includeBaseDirectory>
 
     <fileSets>
+        <!-- App Server deployments -->
         <fileSet>
             <directory>${project.build.directory}/unpacked</directory>
             <includes>
@@ -18,6 +19,8 @@
             </includes>
             <outputDirectory>${jboss-server.name}/standalone/deployments</outputDirectory>
         </fileSet>
+
+        <!-- App Server modules -->
         <fileSet>
             <directory>${project.build.directory}/unpacked/modules</directory>
             <excludes>
@@ -25,6 +28,8 @@
             </excludes>
             <outputDirectory>${jboss-server.name}/${jboss.modules.dir}</outputDirectory>
         </fileSet>
+
+        <!-- PressGang Config -->
         <fileSet>
             <directory>${basedir}</directory>
             <includes>
@@ -36,6 +41,12 @@
             <directory>${basedir}/src/main/config</directory>
             <outputDirectory>${jboss-server.name}/standalone/configuration/pressgang/</outputDirectory>
         </fileSet>
+
+        <!-- JPPF -->
+        <fileSet>
+            <directory>${project.build.directory}/unpacked/zanata-sync-service</directory>
+            <outputDirectory>JPPF/JPPF-${jppf.version}-node/lib</outputDirectory>
+        </fileSet>
         <fileSet>
             <directory>${project.build.directory}/JPPF</directory>
             <excludes>
@@ -45,10 +56,6 @@
                 <exclude>JPPF-${jppf.version}-driver/startDriver.sh</exclude>
             </excludes>
             <outputDirectory>JPPF</outputDirectory>
-        </fileSet>
-        <fileSet>
-            <directory>${project.build.directory}/unpacked/zanata-sync-service</directory>
-            <outputDirectory>JPPF/JPPF-${jppf.version}-node/lib</outputDirectory>
         </fileSet>
         <fileSet>
             <directory>${basedir}/JPPF</directory>
@@ -63,6 +70,16 @@
             <includes>
                 <include>startDriver.sh</include>
             </includes>
+        </fileSet>
+
+        <!-- Zanata Sync Service -->
+        <fileSet>
+            <directory>${project.build.directory}/unpacked/zanata-sync-service</directory>
+            <outputDirectory>zanata-sync-service/lib</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/zanata-sync-service</directory>
+            <outputDirectory>zanata-sync-service/</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>
