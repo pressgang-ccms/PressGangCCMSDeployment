@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <datasource jta="true" jndi-name="java:/PressGangCCMSDatasource" pool-name="PressGangCCMSDatasource" enabled="true" use-java-context="true" use-ccm="true">
+      <connection-url>jdbc:mysql://localhost:3306/Skynet?jdbcCompliantTruncation=false&amp;useUnicode=true&amp;characterEncoding=UTF-8</connection-url>
+      <driver-class>com.mysql.jdbc.Driver</driver-class>
+      <driver>mysql-connector-java.jar</driver>
+      <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+      <pool>
+          <min-pool-size>20</min-pool-size>
+          <max-pool-size>151</max-pool-size>
+          <prefill>true</prefill>
+          <use-strict-min>false</use-strict-min>
+          <flush-strategy>FailingConnectionOnly</flush-strategy>
+      </pool>
+      <security>
+          <user-name></user-name>
+          <password></password>
+      </security>
+      <validation>
+          <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+          <validate-on-match>false</validate-on-match>
+          <background-validation>false</background-validation>
+          <use-fast-fail>false</use-fast-fail>
+          <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+      </validation>
+      <statement>
+          <prepared-statement-cache-size>50</prepared-statement-cache-size>
+          <share-prepared-statements>true</share-prepared-statements>
+      </statement>
+  </datasource>
+  <datasource jta="false" jndi-name="java:/TeiidVDB" pool-name="TeiidVDB" enabled="false" use-java-context="true" use-ccm="true">
+      <connection-url>jdbc:teiid:public@mms://localhost:31000</connection-url>
+      <driver-class>org.teiid.jdbc.TeiidDriver</driver-class>
+      <driver>teiid-jdbc.jar</driver>
+      <security>
+          <user-name></user-name>
+          <password></password>
+      </security>
+      <statement>
+          <prepared-statement-cache-size>5</prepared-statement-cache-size>
+          <share-prepared-statements>true</share-prepared-statements>
+      </statement>
+  </datasource>
+</datasources>

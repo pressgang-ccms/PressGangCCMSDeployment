@@ -19,26 +19,24 @@
             </includes>
             <outputDirectory>${jboss-server.name}/standalone/deployments</outputDirectory>
         </fileSet>
-
-        <!-- App Server modules -->
         <fileSet>
-            <directory>${project.build.directory}/unpacked/modules</directory>
-            <excludes>
-                <exclude>zanata-sync-service</exclude>
-            </excludes>
-            <outputDirectory>${jboss-server.name}/${jboss.modules.dir}</outputDirectory>
+            <directory>${basedir}/resources</directory>
+            <includes>
+                <include>pressgang-ds.xml</include>
+            </includes>
+            <outputDirectory>${jboss-server.name}/standalone/deployments</outputDirectory>
         </fileSet>
 
         <!-- PressGang Config -->
-        <!--<fileSet>
-            <directory>${basedir}</directory>
-            <includes>
-                <include>servers.json</include>
-            </includes>
-            <outputDirectory>${jboss-server.name}/welcome-content/pressgang-ccms-config</outputDirectory>
-        </fileSet>-->
         <fileSet>
-            <directory>${basedir}/src/main/config</directory>
+            <directory>${basedir}/resources</directory>
+            <includes>
+                <include>setup.cli</include>
+            </includes>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/resources/config</directory>
             <outputDirectory>${jboss-server.name}/standalone/configuration/pressgang/</outputDirectory>
         </fileSet>
 
@@ -58,14 +56,14 @@
             <outputDirectory>JPPF</outputDirectory>
         </fileSet>
         <fileSet>
-            <directory>${basedir}/JPPF</directory>
+            <directory>${basedir}/resources/JPPF</directory>
             <outputDirectory>JPPF/JPPF-${jppf.version}-node/</outputDirectory>
             <includes>
                 <include>startNode.sh</include>
             </includes>
         </fileSet>
         <fileSet>
-            <directory>${basedir}/JPPF</directory>
+            <directory>${basedir}/resources/JPPF</directory>
             <outputDirectory>JPPF/JPPF-${jppf.version}-driver/</outputDirectory>
             <includes>
                 <include>startDriver.sh</include>
@@ -78,7 +76,7 @@
             <outputDirectory>zanata-sync-service/lib</outputDirectory>
         </fileSet>
         <fileSet>
-            <directory>${basedir}/zanata-sync-service</directory>
+            <directory>${basedir}/resources/zanata-sync-service</directory>
             <outputDirectory>zanata-sync-service/</outputDirectory>
         </fileSet>
     </fileSets>

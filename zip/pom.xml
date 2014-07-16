@@ -53,6 +53,21 @@
                                     <outputDirectory>${project.build.directory}/unpacked</outputDirectory>
                                     <destFileName>pressgang-ccms-${project.version}.ear</destFileName>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>mysql</groupId>
+                                    <artifactId>mysql-connector-java</artifactId>
+                                    <version>${mysql.connector.version}</version>
+                                    <outputDirectory>${project.build.directory}/unpacked</outputDirectory>
+                                    <destFileName>mysql-connector-java.jar</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.jboss.teiid</groupId>
+                                    <artifactId>teiid</artifactId>
+                                    <version>${teiid.version}</version>
+                                    <classifier>jdbc</classifier>
+                                    <outputDirectory>${project.build.directory}/unpacked</outputDirectory>
+                                    <destFileName>teiid-jdbc.jar</destFileName>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -64,24 +79,6 @@
                         </goals>
                         <configuration>
                             <outputDirectory>${project.build.directory}/unpacked/zanata-sync-service</outputDirectory>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>unpack</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>org.jboss.pressgang.ccms</groupId>
-                                    <artifactId>jboss-modules</artifactId>
-                                    <version>${project.version}</version>
-                                    <type>zip</type>
-                                    <outputDirectory>${project.build.directory}/unpacked/modules</outputDirectory>
-                                </artifactItem>
-                            </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
@@ -121,8 +118,8 @@
                         <phase>prepare-package</phase>
                         <configuration>
                             <tasks>
-                                <unzip src="JPPF/JPPF-${jppf.version}-driver.zip" dest="${project.build.directory}/JPPF/" />
-                                <unzip src="JPPF/JPPF-${jppf.version}-node.zip" dest="${project.build.directory}/JPPF/" />
+                                <unzip src="resources/JPPF/JPPF-${jppf.version}-driver.zip" dest="${project.build.directory}/JPPF/" />
+                                <unzip src="resources/JPPF/JPPF-${jppf.version}-node.zip" dest="${project.build.directory}/JPPF/" />
                             </tasks>
                         </configuration>
                         <goals>

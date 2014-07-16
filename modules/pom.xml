@@ -15,11 +15,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <properties>
-        <mysql.connector.version>5.1.31</mysql.connector.version>
-        <teiid.version>8.4.0.Final</teiid.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
