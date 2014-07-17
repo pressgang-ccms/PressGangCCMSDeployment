@@ -12,5 +12,8 @@ end-if
 /subsystem=logging/logger=org.jboss.pressgang.ccms.contentspec.processor.ContentSpecValidator:add(level=OFF)
 /subsystem=logging/logger=org.apache.deltaspike.core.api.provider.BeanManagerProvider:add(level=ERROR)
 
+# Increase the max-connections on the http connector
+/subsystem=web/connector=http:write-attribute(name=max-connections,value=1000)
+
 # Reload to apply the settings
 :reload
