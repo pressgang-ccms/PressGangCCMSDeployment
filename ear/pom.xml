@@ -11,13 +11,9 @@
     <parent>
         <groupId>org.jboss.pressgang.ccms</groupId>
         <artifactId>pressgang-ccms-deployment</artifactId>
-        <version>1.8</version>
+        <version>1.9-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
-    <properties>
-        <pressgang.static.version>1.7</pressgang.static.version>
-    </properties>
 
     <dependencies>
         <dependency>

@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.pressgang.ccms</groupId>
     <artifactId>pressgang-ccms-deployment</artifactId>
-    <version>1.8</version>
+    <version>1.9-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -16,11 +16,11 @@
     </parent>
 
     <properties>
-        <pressgang.ccms.version>1.8</pressgang.ccms.version>
+        <pressgang.ccms.version>1.9-SNAPSHOT</pressgang.ccms.version>
         <pressgang.ccms.server.version>${pressgang.ccms.version}</pressgang.ccms.server.version>
         <pressgang.ccms.import.version>${pressgang.ccms.version}</pressgang.ccms.import.version>
         <pressgang.ccms.ui.version>${pressgang.ccms.version}</pressgang.ccms.ui.version>
-        <pressgang.ccms.static.version>1.7</pressgang.ccms.static.version>
+        <pressgang.ccms.static.version>${pressgang.ccms.version}</pressgang.ccms.static.version>
         <mysql.connector.version>5.1.26</mysql.connector.version>
         <teiid.version>8.5.0.Final</teiid.version>
     </properties>
