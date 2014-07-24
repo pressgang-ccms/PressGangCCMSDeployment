@@ -6,7 +6,7 @@ Prerequisites:
 
 1. Add the following profiles to your maven settings.xml:
 
-        
+```xml      
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 	<profiles>
 		<profile>
@@ -46,7 +46,8 @@ Prerequisites:
 			</pluginRepositories>
 		</profile>
 	</profiles>
-</settings>	
+</settings>
+```
     		
 2. Checkout and install the following applications into your local maven repo for the required version (eg git clone `REPO`; git checkout `VERSION`; mvn clean install)
  * https://github.com/pressgang-ccms/PressGangCCMSREST
