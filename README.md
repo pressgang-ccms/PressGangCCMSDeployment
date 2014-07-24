@@ -79,6 +79,6 @@ Prerequisites:
     		
 2. Checkout and install the following applications into your local maven repo for the required version (eg git clone `REPO`; git checkout `VERSION`; mvn clean install)
  * https://github.com/pressgang-ccms/PressGangCCMSREST
- * https://github.com/pressgang-ccms/PressGangCCMSStatic
+ * https://github.com/pressgang-ccms/PressGangCCMSStaticContent
  * https://github.com/pressgang-ccms/PressGangCCMSUI
  * https://github.com/pressgang-ccms/PressGangCCMSImport
