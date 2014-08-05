@@ -51,7 +51,9 @@
                 <exclude>JPPF-${jppf.version}-node/lib/log4j*.jar</exclude>
                 <exclude>JPPF-${jppf.version}-node/lib/slf4j*.jar</exclude>
                 <exclude>JPPF-${jppf.version}-node/startNode.sh</exclude>
+                <exclude>JPPF-${jppf.version}-node/config/jppf-node.properties</exclude>
                 <exclude>JPPF-${jppf.version}-driver/startDriver.sh</exclude>
+                <exclude>JPPF-${jppf.version}-driver/config/jppf-driver.properties</exclude>
             </excludes>
             <outputDirectory>JPPF</outputDirectory>
         </fileSet>
@@ -64,9 +66,23 @@
         </fileSet>
         <fileSet>
             <directory>${basedir}/resources/JPPF</directory>
+            <outputDirectory>JPPF/JPPF-${jppf.version}-node/config/</outputDirectory>
+            <includes>
+                <include>jppf-node.properties</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/resources/JPPF</directory>
             <outputDirectory>JPPF/JPPF-${jppf.version}-driver/</outputDirectory>
             <includes>
                 <include>startDriver.sh</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/resources/JPPF</directory>
+            <outputDirectory>JPPF/JPPF-${jppf.version}-driver/config/</outputDirectory>
+            <includes>
+                <include>jppf-driver.properties</include>
             </includes>
         </fileSet>
 
