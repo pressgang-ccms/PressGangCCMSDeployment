@@ -2,7 +2,7 @@
 connect
 
 # Apply the basic settings
-if (outcome != success) of /system-property=test:read-resource
+if (outcome != success) of /system-property=org.jboss.as.logging.per-deployment:read-resource
     /system-property=org.jboss.as.logging.per-deployment:add(value=false)
 end-if
 /subsystem=transactions/:write-attribute(name=default-timeout,value=600)

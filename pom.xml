@@ -6,17 +6,17 @@
 
     <groupId>org.jboss.pressgang.ccms</groupId>
     <artifactId>pressgang-ccms-deployment</artifactId>
-    <version>1.9-SNAPSHOT</version>
+    <version>1.9</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.jboss.pressgang</groupId>
         <artifactId>pressgang-parent</artifactId>
-        <version>1.6</version>
+        <version>1.7</version>
     </parent>
 
     <properties>
-        <pressgang.ccms.version>1.9-SNAPSHOT</pressgang.ccms.version>
+        <pressgang.ccms.version>1.9</pressgang.ccms.version>
         <pressgang.ccms.server.version>${pressgang.ccms.version}</pressgang.ccms.server.version>
         <pressgang.ccms.import.version>${pressgang.ccms.version}</pressgang.ccms.import.version>
         <pressgang.ccms.ui.version>${pressgang.ccms.version}</pressgang.ccms.ui.version>

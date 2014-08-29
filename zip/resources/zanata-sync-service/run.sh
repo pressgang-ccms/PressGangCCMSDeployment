@@ -26,4 +26,4 @@ java -Xmx${HEAP_SPACE}m -Dpressgang.zanataServer=${ZANATA_SERVER} \
 -Dpressgang.defaultLocale=${DEFAULT_LOCALE} \
 -Dpressgang.minZanataCallInterval=${MIN_ZANATA_CALL_INTERVAL} \
 -Dpressgang.rest.cache.timeout=30 \
--cp lib/* ${MAINCLASS} @command.txt
+-cp lib/* ${MAINCLASS}
